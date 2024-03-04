@@ -1,4 +1,4 @@
-import Slides from "./Onboard/Slides";
+// import Slides from "./Onboard/Slides";
 import ReuseableText from "./Reuseable/ReuseableText";
 import ReuseableBtn from "./Reuseable/ReuseableBtn";
 import HeightSpacer from "./Reuseable/HeightSpacer";
@@ -11,7 +11,7 @@ import ReuseableTiles from "./Reuseable/ReuseableTiles.jsx";
 import WidthSpacer from "./Reuseable/WidthSpacer.jsx";
 import Rating from "./Reuseable/Rating.jsx";
 export {
-    Slides,
+    // Slides,
     ReuseableText,
     ReuseableBtn,
     HeightSpacer,

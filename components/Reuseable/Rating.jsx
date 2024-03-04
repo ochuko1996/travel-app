@@ -1,10 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import resuable from './reusable.style'
 import {MaterialCommunityIcons} from '@expo/vector-icons'
-import {WidthSpacer, reusable} from '../../components'
+import {ReuseableText, WidthSpacer, reusable} from '../../components'
 
-const Rating = (rating) => {
+const Rating = ({rating}) => {
   return (
     <View style={reusable.rowWithSpace('flex-start')}>
       <MaterialCommunityIcons
@@ -26,7 +25,3 @@ const Rating = (rating) => {
 }
 
 export default Rating
-
-const styles = StyleSheet.create({
-
-})

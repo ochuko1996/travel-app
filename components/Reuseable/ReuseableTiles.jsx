@@ -15,29 +15,31 @@ const ReuseableTiles = ({item, onPress}) => {
             radius={12}
         />
         <WidthSpacer width={15}/>
-        <ReuseableText
-            text={item.title}
-            family={'medium'}
-            size={SIZES.medium}
-            color={COLORS.black}
-        />
-        <HeightSpacer height={8}/>
-        <ReuseableText
-            text={item.location}
-            family={'medium'}
-            size={14}
-            color={COLORS.gray}
-        />
-        <HeightSpacer height={8}/>
-        <View style={resuable.rowWithSpace('flex-start')}>
-            <Rating rating={item.rating}/>
-            <WidthSpacer />
-            <ReuseableText
-                text={` ${item.review} `}
-                family={'medium'}
-                size={14}
-                color={COLORS.gray}
-            />    
+        <View>
+          <ReuseableText
+              text={item.title}
+              family={'medium'}
+              size={SIZES.medium}
+              color={COLORS.black}
+          />
+          <HeightSpacer height={8}/>
+          <ReuseableText
+              text={item.location}
+              family={'medium'}
+              size={14}
+              color={COLORS.gray}
+          />
+          <HeightSpacer height={8}/>
+          <View style={resuable.rowWithSpace('flex-start')}>
+              <Rating rating={item.rating}/>
+              <WidthSpacer  width={5}/>
+              <ReuseableText
+                  text={` ${item.review} `}
+                  family={'medium'}
+                  size={14}
+                  color={COLORS.gray}
+              />    
+          </View>
         </View>
 
 

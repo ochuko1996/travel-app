@@ -8,12 +8,13 @@ const Tab = createBottomTabNavigator()
 
 
 const tabBarStyle = {
-    padding: 20,
     borderRadius: 20,
     position: 'absoulte',
     bottom: 20,
-    // left: 20,
-    // right: 20
+    left: 20,
+    right: 20,
+    height: 80,
+    width: '90%'
 }
 const BottomTabNavigation = () => {
   return (
@@ -26,20 +27,21 @@ const BottomTabNavigation = () => {
         barStyles={{paddingBottom: 48}}
     >
         <Tab.Screen 
-        name='Home' 
-        component={Home} 
-        options={{
-          tabBarStyle: tabBarStyle,
-          tabBarShowLabel: false,
-          headerShown: false,
-          tabBarIcon:({focused})=>(
-            <Ionicons 
-              name={focused ? 'grid' : 'grid-outline'}
-              color={focused ? COLORS.red : COLORS.gray}
-              size={26}
-            />
-          )
-        }}/>
+          name="Home" 
+          component={Home} 
+          options={{
+            tabBarStyle: tabBarStyle,
+            tabBarShowLabel: false,
+            headerShown: false,
+            tabBarIcon:({focused})=>(
+              <Ionicons 
+                name={focused ? 'grid' : 'grid-outline'}
+                color={focused ? COLORS.red : COLORS.gray}
+                size={26}
+              />
+            )
+          }}
+        />
         <Tab.Screen 
         name='Location' 
         component={Location} 
