@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity} from 'react-native'
 import React from 'react'
-import { ReuseableText, reusable, HeightSpacer, Places, Recommendations } from '../../components'
+import { ReuseableText, reuseable, HeightSpacer, Places, Recommendations, BestHotels } from '../../components'
 import { COLORS, SIZES, TEXT } from '../../constants/theme'
 import {AntDesign} from '@expo/vector-icons'
 import styles from './home.style'
 const Home = ({navigation}) => {
   return (
-    <SafeAreaView style={reusable.container}>
+    <SafeAreaView style={reuseable.container}>
       <View>
-        <View style={reusable.rowWithSpace('space-between')}>
+        <View style={reuseable.rowWithSpace('space-between')}>
           <ReuseableText
             text={'Hey User'}
             family={'medium'}
@@ -37,6 +37,10 @@ const Home = ({navigation}) => {
       <HeightSpacer height={15}/>
 
       <Recommendations/> 
+      
+      <HeightSpacer height={30}/>
+      
+      <BestHotels/>
     </SafeAreaView>
   )
 }

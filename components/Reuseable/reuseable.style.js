@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const resuable = StyleSheet.create({
+const reuseable = StyleSheet.create({
     container: {
         flex: 1,
         marginHorizontal: 20,
@@ -12,4 +12,4 @@ const resuable = StyleSheet.create({
         justifyContent: justifyContent
     })
 })
-export default resuable
+export default reuseable

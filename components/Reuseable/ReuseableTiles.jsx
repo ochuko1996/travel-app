@@ -1,13 +1,12 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import resuable from './reusable.style'
-import {HeightSpacer, NetworkImage, Rating, ReuseableText, WidthSpacer} from '../../components'
-import { COLORS, SIZES, TEXT } from '../../constants/theme'
+import {HeightSpacer, NetworkImage, Rating, ReuseableText, WidthSpacer, reuseable} from '../../components'
+import { COLORS, SIZES } from '../../constants/theme'
 
 const ReuseableTiles = ({item, onPress}) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <View style={resuable.rowWithSpace('flex-start')}>
+      <View style={reuseable.rowWithSpace('flex-start')}>
         <NetworkImage
             source={item.imageUrl}
             width={80}
@@ -30,7 +29,7 @@ const ReuseableTiles = ({item, onPress}) => {
               color={COLORS.gray}
           />
           <HeightSpacer height={8}/>
-          <View style={resuable.rowWithSpace('flex-start')}>
+          <View style={reuseable.rowWithSpace('flex-start')}>
               <Rating rating={item.rating}/>
               <WidthSpacer  width={5}/>
               <ReuseableText

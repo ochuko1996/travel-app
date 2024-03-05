@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-import reuseable from '../Reuseable/reusable.style'
+import reuseable from '../Reuseable/reuseable.style'
 import ReuseableText from '../Reuseable/ReuseableText'
 import { SIZES, TEXT, COLORS } from '../../constants/theme'
 import {Feather} from  '@expo/vector-icons'
@@ -79,7 +79,7 @@ const Recommendations = () => {
         keyExtractor={(item)=> item._id}
         contentContainerStyle={{columnGap: SIZES.medium}}
         renderItem={({item})=>(
-            <ReuseableTiles item={item} onPress={()=> {}}/>
+            <ReuseableTiles item={item} onPress={()=> navigation.navigate('PlaceDetails', item._id)}/>
         )}
       />
     

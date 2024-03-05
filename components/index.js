@@ -2,7 +2,7 @@
 import ReuseableText from "./Reuseable/ReuseableText";
 import ReuseableBtn from "./Reuseable/ReuseableBtn";
 import HeightSpacer from "./Reuseable/HeightSpacer";
-import reusable from "./Reuseable/reusable.style";
+import reuseable from "./Reuseable/reuseable.style";
 import Places from "./Home/Places";
 import Country from "./Tiles/Country/Country";
 import NetworkImage from "./Reuseable/NetworkImage";
@@ -10,17 +10,25 @@ import Recommendations from './Home/Recommendations.jsx'
 import ReuseableTiles from "./Reuseable/ReuseableTiles.jsx";
 import WidthSpacer from "./Reuseable/WidthSpacer.jsx";
 import Rating from "./Reuseable/Rating.jsx";
+import BestHotels from "./Home/BestHotels.jsx";
+import HotelCard from "./Tiles/Hotels/HotelCard.jsx";
+import DescriptionText from "./Reuseable/DescriptionText.jsx";
+import PopularList from "./Country/PopularList.jsx";
 export {
     // Slides,
     ReuseableText,
     ReuseableBtn,
     HeightSpacer,
     WidthSpacer,
-    reusable,
+    reuseable,
     Places,
     Country,
     NetworkImage,
     Recommendations,
     ReuseableTiles,
-    Rating
+    Rating,
+    BestHotels,
+    HotelCard,
+    DescriptionText,
+    PopularList
 }
