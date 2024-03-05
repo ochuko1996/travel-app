@@ -79,7 +79,7 @@ const Recommendations = () => {
         keyExtractor={(item)=> item._id}
         contentContainerStyle={{columnGap: SIZES.medium}}
         renderItem={({item})=>(
-            <ReuseableTiles item={item} onPress={()=> navigation.navigate('PlaceDetails', item._id)}/>
+            <ReuseableTiles item={item} onPress={()=> navigation.navigate('PlaceDetails')}/>
         )}
       />
     

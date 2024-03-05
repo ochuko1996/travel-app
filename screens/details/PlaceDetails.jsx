@@ -1,5 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import { DescriptionText, HeightSpacer, NetworkImage, PopularList, ReuseableBtn, ReuseableText, reuseable } from '../../components';
+import AppBar from '../../components/Reuseable/AppBar';
+import { COLORS, SIZES, TEXT } from '../../constants/theme';
+import {Feather} from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native';
 
 const PlaceDetails = (payload) => {
     const {params: id} = payload.route
@@ -35,13 +40,83 @@ const PlaceDetails = (payload) => {
             }
         ]
     }
+    const navigation = useNavigation()
   return (
-    <View>
-      <Text>PlaceDetails</Text>
-    </View>
+    <ScrollView>
+        <View>
+           <NetworkImage 
+            source={place.imageUrl} 
+            width={'100%'}
+            height={350}
+            radius={30}
+          />
+          <AppBar 
+          title={place.title} 
+          color={COLORS.white} 
+          color1={COLORS.white} 
+          icon={'search1'}
+          onPress={()=> navigation.goBack()}
+          onPress1={()=> {}}
+          top={40}
+          left={20}
+          right={20}
+        />
+        </View>
+        <View style={styles.description}>
+          <HeightSpacer height={15}/>
+          <ReuseableText
+            text={place.location}
+            family={'medium'}
+            size={TEXT.large}
+            color={COLORS.black}
+          />
+          <DescriptionText text={place.description} />
+          
+          <View style={{alignContent: 'center'}}>
+            <View style={reuseable.rowWithSpace('space-between')}>
+              <ReuseableText
+                text={'Popular Hotels'}
+                family={'medium'}
+                size={TEXT.large}
+                color={COLORS.black}
+              />
+              <TouchableOpacity onPress={()=> {}}>
+                <Feather 
+                  name='list'
+                  size={20}
+                />
+              </TouchableOpacity>
+            </View>
+
+            <HeightSpacer height={20} />
+
+            <PopularList data={place.popular}/>
+
+            <ReuseableBtn
+              onPress={()=> navigation.navigate("HotelSearch", country._id)}
+              btnTxt={"Let's go"}
+              width={(SIZES.width - 40) }
+              backgroundColor={COLORS.green}
+              borderColor={COLORS.green}
+              borderWidth={0}
+              textColor={COLORS.white}
+            />
+              
+          </View>
+        </View>
+      </ScrollView>
   )
 }
 
 export default PlaceDetails
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#f3f4f8',
+    marginHorizontal: 20,
+  },
+  description: {
+    marginHorizontal: 20,
+    paddingTop: 20,
+  }
+})
