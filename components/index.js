@@ -14,6 +14,7 @@ import BestHotels from "./Home/BestHotels.jsx";
 import HotelCard from "./Tiles/Hotels/HotelCard.jsx";
 import DescriptionText from "./Reuseable/DescriptionText.jsx";
 import PopularList from "./Country/PopularList.jsx";
+import HotelMap from "./Home/HotelMap.jsx";
 export {
     // Slides,
     ReuseableText,
@@ -30,5 +31,6 @@ export {
     BestHotels,
     HotelCard,
     DescriptionText,
-    PopularList
+    PopularList,
+    HotelMap
 }
